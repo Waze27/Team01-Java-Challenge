@@ -1,6 +1,10 @@
 public interface SortableSequence<T> {
 
-    void sort();
+
+    static <T extends Comparable> void sort() {
+
+    }
+
     boolean isSorted();
 
 }
