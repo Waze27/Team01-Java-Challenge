@@ -13,12 +13,12 @@ public class Game extends Comparable {
         return finaleScore;
     }
 
-
-    public void FinalScoreComparable(Game player1, Game player2) {
+    public boolean FinalScoreComparable(Game player1, Game player2) {
         if (player1.GetScore() > player2.GetScore()) {
-            System.out.println("player " + " " + player1.GetScore());
+
+            return true;
         } else {
-            System.out.println("player " + " " + player2.GetScore());
+            return false;
         }
     }
 

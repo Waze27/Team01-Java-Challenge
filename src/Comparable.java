@@ -1,5 +1,4 @@
 public abstract class Comparable {
 
-
-    public abstract void FinalScoreComparable(Game player1,Game player2);
+    public abstract boolean FinalScoreComparable(Game player1, Game player2);
 }
