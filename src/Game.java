@@ -27,10 +27,7 @@ public class Game implements Comparable<Game> {
 
     @Override
     public String toString() {
-        return "Game{" +
-                "enemies=" + enemies +
-                ", score=" + score +
-                '}';
+        return " enemies: [" + enemies + "] score: [" + String.format("%.2f",score) + "]";
     }
 
     /**

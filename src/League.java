@@ -3,9 +3,8 @@ import java.util.Random;
 
 /**
  * @Author Mario Cotumaccio
+ * Creating an enumeration League with ranking system
  */
-
-//Creating an enumeration League with ranking system
 public enum League {
 
     Bronze,
@@ -26,6 +25,45 @@ public enum League {
         return p.getAverageScore() < 50;
     }
 
+    public League upgradeLeague(League league) {
+        switch (league) {
+            case Bronze -> {
+                return Silver;
+            }
+            case Silver -> {
+                return Gold;
+            }
+            case Gold -> {
+                return Platinum;
+            }
+            case Platinum -> {
+                return Diamond;
+            }
+            default -> {
+                return league;
+            }
+        }
+    }
+
+    public League downgradeLeague(League league) {
+        switch (league) {
+            case Diamond -> {
+                return Platinum;
+            }
+            case Platinum -> {
+                return Gold;
+            }
+            case Gold -> {
+                return Silver;
+            }
+            case Silver -> {
+                return Bronze;
+            }
+            default -> {
+                return league;
+            }
+        }
+    }
 
     //These are functions that randomly generate the League
     private static final List<League> VALUES = List.of(values());

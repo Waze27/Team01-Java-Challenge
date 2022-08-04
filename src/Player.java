@@ -1,5 +1,4 @@
 import java.util.List;
-
 /**
  * @author Mirko Di Cristina
  * The class represents a player
@@ -35,11 +34,7 @@ public class Player implements Comparable<Player> {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "name='" + name + '\'' +
-                ", games=" + games +
-                ", league=" + league +
-                '}';
+        return "Player name: " + name + " - Games -> {" + games + "} " + " FinalScore:(" + String.format("%.2f",getAverageScore()) + ") League -> " + league;
     }
 
     /**
