@@ -5,6 +5,6 @@
  */
 public interface SortableSequence<T> {
 
-   void sort();
-   boolean isSorted();
+   void sort(int index);
+   boolean isSorted(int index);
 }

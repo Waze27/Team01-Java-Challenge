@@ -1,12 +1,10 @@
 import java.lang.reflect.Array;
-
 /**
  * A class which implements and develops sort, set and remove methods
  * @param <T> generic parameter
  * @author Anthony Elia
  */
 public class SortableArray<T extends Comparable> implements SortableSequence {
-
     T[] array;
 
     /**
@@ -16,21 +14,22 @@ public class SortableArray<T extends Comparable> implements SortableSequence {
      */
     public SortableArray(Class<T> arr, int length) {
         this.array = (T[]) Array.newInstance(arr, length);
-    }
+}
 
     /**
      * This method sorts the array's elements
      */
     @Override
-    public void sort() {
-        for (int i = 1; i < array.length; i++) {
+    public void sort(int index) {
+        for (int i = 1; i < index; ++i) {
             T element = array[i];
 
-            int j = 1;
+            int j = i;
             while (j > 0 && element.compareTo(array[j - 1]) < 0) {
                 array[j] = array[j - 1];
                 --j;
             }
+            array[j] = element;
         }
     }
 
@@ -39,8 +38,8 @@ public class SortableArray<T extends Comparable> implements SortableSequence {
      * @return return true if the array is sorted, false if not
      */
     @Override
-    public boolean isSorted() {
-        for (int i = 0; i < array.length - 1; ++i) {
+    public boolean isSorted(int index) {
+        for (int i = 0; i < index - 1; ++i) {
             if (array[i].compareTo(array[i + 1]) > 0) {
                 return false;
             }
