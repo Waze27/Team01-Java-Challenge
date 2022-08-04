@@ -50,22 +50,3 @@ public class Player implements Comparable<Player> {
         return Double.compare(this.getAverageScore(), o.getAverageScore());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
