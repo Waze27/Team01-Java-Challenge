@@ -1,9 +1,8 @@
 /**
  * @author Mirko Di Cristina
- * @param <T> Generic parameter.
  * Implementation of methods for sorting.
  */
-public interface SortableSequence<T> {
+public interface SortableSequence {
 
    void sort(int index);
    boolean isSorted(int index);
