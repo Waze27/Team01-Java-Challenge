@@ -1,25 +1,43 @@
-public class Game extends Comparable {
+/**
+ * @author Soheil
+ */
+public class Game implements Comparable<Game> {
 
     int enemies;
     double score;
 
-    Game(int enemies, double score) {
-        this.enemies = enemies;
-        this.score = score;
-    }
 
-    public double GetScore() {
-        double finaleScore = enemies * score;
-        return finaleScore;
-    }
+public Game(int enemies, double score) {
+this.enemies = enemies;
+this.score = score;
+}
 
-    public boolean FinalScoreComparable(Game player1, Game player2) {
-        if (player1.GetScore() > player2.GetScore()) {
-
-            return true;
-        } else {
-            return false;
-        }
-    }
+    /**
+     * each enemy killed have score
+     * @return score of enenmy killed
+     */
+    public double getFinalScore() {
+return enemies*score;
 
 }
+
+ @Override
+ public String toString() {
+ return "Game{" +
+ "enemies=" + enemies +
+ ", score=" + score +
+ '}';
+ }
+
+    /**
+     *
+     * @param o to compare enemy score
+     * @return who have more score
+     */
+ @Override
+ public int compareTo(Game o) {
+ return Double.compare(this.getFinalScore(), o.getFinalScore());
+ }
+ }
+
+
