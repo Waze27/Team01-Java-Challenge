@@ -2,7 +2,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @Author Mario Cotumaccio
+ * @author Mario Cotumaccio
  * Creating an enumeration League with ranking system
  */
 public enum League {
